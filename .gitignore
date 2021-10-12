@@ -1,0 +1,5 @@
+# Do not upload content generated from dev container.
+.vscode-server/
+
+# Do not either upload content generated from Rust.
+*/target/
