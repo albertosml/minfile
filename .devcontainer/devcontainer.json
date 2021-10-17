@@ -1,0 +1,10 @@
+{
+    "name": "minfile development in Rust",
+    "image": "mcr.microsoft.com/vscode/devcontainers/rust:bullseye",
+    "workspaceFolder": "/usr/app",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/usr/app,type=bind,consistency=cached",
+    "remoteUser": "vscode",
+    "extensions": [
+        "rust-lang.rust"
+    ]
+}
