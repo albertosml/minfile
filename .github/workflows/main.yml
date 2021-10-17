@@ -1,0 +1,22 @@
+name: run-tests
+
+on:
+  push:
+    tags:
+      - v*.*.*
+  pull_request:
+    branches:
+      - main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Rust environment
+        uses: docker://rust:bullseye
+      - name: Run tests
+        run: cargo test
+        working-directory: ./minfile
